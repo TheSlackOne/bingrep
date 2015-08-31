@@ -1,0 +1,89 @@
+0.2.09:
+- Migrated to QtCreator.
+
+0.2.08:
+- The building mechanism was replaced for Makefiles.
+
+0.2.07:
+- Fixed not found "ABC". The bitset needed to be reset before assign.
+
+0.2.05:
+- Fixed LD_LIBRARY_PATH environment variable and other settings to be able to debug.
+
+0.2.04:
+- Fixed the linking configuration of CodeLite.
+
+0.2.03:
+- Removing libbingrep from the workspace.
+- Redesign of the manage of libbingrep.
+- Fixed linking path against libbingrep.
+
+0.2.02:
+- Adding libbingrep to the same workspace.
+
+0.2.01:
+- Using the new version of libbingrep, 0.2.01.
+- Minor changes.
+
+0.2.00:
+- libbingrep.so created.
+- Building script improved, but now, there are some problems to debug using CodeLite.
+
+0.1.08:
+- Changed read_pattern function to use S_ISREG macro.
+
+0.1.07:
+- Now bingrep can take the pattern to find from a parameter.
+- Bingrep can handle any user input.
+
+0.1.06:
+- Now bingrep has the capability of reading the patterns from a text file.
+
+0.1.05:
+- Now the searchs throw a new tread.
+
+0.1.04:
+- Improved taking external arguments.
+
+0.1.03:
+- Now takes external arguments.
+
+0.1.02:
+- Improving input.
+
+0.1.01:
+- Adjusting output control.
+
+0.1.00:
+- All good!.
+
+0.0.28:
+- Matching between blocks.
+
+0.0.27:
+- Log improved.
+
+0.0.26:
+- Log improved.
+
+0.0.25:
+- Just left look matching between blocks.
+
+0.0.23:
+- Has the capabilities of finding a pattern in a block.
+- Returns correctly the offset.
+- ToDo: BinFinder::containsInFile must find a pattern fragmented between blocks.
+
+0.0.20:
+- In this version the method BinFinder::containsInFile was rewritten.
+
+0.0.16:
+- I just fix some cosmetic issues.
+- Fix close the open file.
+- Building script finished.
+
+0.0.15:
+- Improved the output for debugging perpouses.
+
+0.0.14:
+- Fix in the finding algorithm of BinFinder::containsInFile.

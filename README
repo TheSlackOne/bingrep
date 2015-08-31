@@ -1,0 +1,12 @@
+Bingrep allows you to find a binary expresion into a file, or files, by searching recursively in a directory tree. You do not depend on file extensions anymore. You can find any file for its type, Bingrep will find it looking for binary patterns into the file.
+You could use Bingrep for binary audit purposes as well.
+
+
+Building
+------------
+Just run make.
+Other options: clean, cleandist, dist
+
+
+Regards,
+Ernesto Messina

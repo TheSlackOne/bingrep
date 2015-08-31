@@ -1,0 +1,3 @@
+- Try to find an expression in a subdirecotry.
+- Replace building scripts for make?
+- Mejorar el log de libbingrep, incluyendo el archivo leido en la iteracion corriente, y offset del match
