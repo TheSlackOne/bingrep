@@ -1,5 +1,9 @@
+0.3.01:
+- Working with GitHub.
+
 0.2.09:
 - Migrated to QtCreator.
+- Project uploaded to GitHub.
 
 0.2.08:
 - The building mechanism was replaced for Makefiles.

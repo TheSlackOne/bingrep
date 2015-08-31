@@ -17,9 +17,8 @@
 int main(int argc, char **argv)
 {
 	/**
-	 * Armar busquedas binarias predefinidas por tipo de archivos (buscar por su header). Por ejemplo: todo los archivos PDF
-	*/
-	// Process input
+     * Create binary searches predefined by file type (look into its header). For example: all the PDF files
+    */
 	DirTreeReader *dtr {};
 	std::vector<std::bitset<8>> vecPat;
 	unsigned char optField = read_opt(argc, argv, "fl");
@@ -54,9 +53,7 @@ int main(int argc, char **argv)
 	
 	
 	std::cout << "Number of CPU cores: " << std::thread::hardware_concurrency() << std::endl;
-	std::vector<std::string> files = dtr->loadFiles();
-//	for (uint i = 0; i < files.size(); ++i)
-//		std::cout << files.at(i) << std::endl;
+    std::vector<std::string> files = dtr->loadFiles();
 	std::cout << "Total files read: " << dtr->getTotalFiles() << std::endl;
 	
 	
@@ -69,9 +66,9 @@ int main(int argc, char **argv)
 		if ((optField & OPTIONS::CURR_FILE) == OPTIONS::CURR_FILE)
 			std::cout << "Looking into " << files.at(i) << std::endl;
 		if ((optField & OPTIONS::CREAT_LOG) == OPTIONS::CREAT_LOG)
-			fut = std::async(std::launch::async, &BinFinder::containsInFile, &bf, vecPat, 1, true);	// std::launch::async force async to create a thread
+            fut = std::async(std::launch::async, &BinFinder::containsInFile, &bf, vecPat, 1, true);     // std::launch::async force async to create a thread
 		else
-			fut = std::async(std::launch::async, &BinFinder::containsInFile, &bf, vecPat, 1, false);	// std::launch::async force async to create a thread
+            fut = std::async(std::launch::async, &BinFinder::containsInFile, &bf, vecPat, 1, false);    // std::launch::async force async to create a thread
 		offset = fut.get();
 		if (offset > -1)
 			std::cout << "Found in: " << files.at(i) << " at offset: " << std::hex << "0x" << offset << std::endl;
