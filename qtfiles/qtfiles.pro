@@ -26,3 +26,5 @@ unix|win32: LIBS += -L$$PWD/../lib/ -lbingrep
 
 INCLUDEPATH += $$PWD/../
 DEPENDPATH += $$PWD/../
+
+TARGET = bingrep
