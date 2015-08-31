@@ -8,8 +8,8 @@
 void show_usages(char *argv0)
 {
 	std::cout << "Usage: " << argv0 << " " << "[option] <searching path> <expression file>" << std::endl << std::endl;
-	std::cout << "    -f    Shows the file being scanned." << std::endl;
-	std::cout << "    -l    Generates log file. Slow!." << std::endl << std::endl;
+    std::cout << "    -v    Verbose. Shows the file being scanned." << std::endl;
+    std::cout << "    -f    Generates log file. Slow!." << std::endl << std::endl;
 	std::cout << "  e.g:" << std::endl;
 	std::cout << "  1) " << argv0 << " /home/darkBit pattern.txt" << std::endl;
 	std::cout << "  2) " << argv0 << " -l /home/darkBit pattern.txt" << std::endl << std::endl;
@@ -30,12 +30,12 @@ unsigned char read_opt(int argc, char *const *argv, const char *options)
 		//std::cout << "getopt = " << c << std::endl;	//debug
 		switch (c)
 		{
-			case 'l':
+            case 'f':
 			{
 				opt |= OPTIONS::CREAT_LOG;
 				break;
 			}
-			case 'f':
+            case 'v':
 			{
 				opt |= OPTIONS::CURR_FILE;
 				break;
