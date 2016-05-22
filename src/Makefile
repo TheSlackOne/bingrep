@@ -8,7 +8,7 @@ LIBS = -lpthread -lbingrep
 all: main move strip clean
 
 main: main.o utils.o
-	g++ $(CFLAG) main.o utils.o -o main $(LIB_PATH) $(LIBS)
+	g++ $(CFLAG) main.o utils.o -o bingrep $(LIB_PATH) $(LIBS)
 
 main.o: main.cpp
 	g++ $(CFLAG) -c main.cpp -o main.o
@@ -18,7 +18,7 @@ utils.o:
 
 move:
 	mkdir -p ../bin
-	mv main ../bin
+	mv bingrep ../bin
 
 strip:
 	strip -s ../bin/*
