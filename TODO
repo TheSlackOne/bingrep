@@ -1,1 +1,0 @@
-- Mejorar el log de libbingrep, incluyendo el archivo leido en la iteracion corriente, y offset del match
